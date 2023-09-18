@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.c-barraLateral {
+  background: #252525;
+  height: 100vh;
+  width: 240px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.c-logo {
+  max-width: 250px;
+  max-height: 180px;
+  margin-top: 20px;
+}
+
+.c-title {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  margin: 20px;
+  text-align: start;
+}
+
+.c-barraLateral nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  text-align: start;
+}
+
+.c-nav-itens {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-nav-itens div{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.c-barraLateral-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.button-dashboard:hover {
+  color: #535353;
+}
+
+.button-saldo:hover {
+  color: #6ffc2d;
+}
+
+.button-despesa:hover {
+  color: #dc3545;
+}
+
+a {
+  text-decoration: none;
+}
+
+.c-icons {
+  margin: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.c-usuario a{
+  margin-left: 10px;
+}
+
+.perfil{
+  color: white;
+  border-top: #535353 solid 1px;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+}
+
+.perfil img{
+  width: 30px;
+  border-radius: 16px;
+  margin: 6px 6px 0 6px;
+}
+
+.perfil a {
+  margin-left: 10px;
+}
+
+
+@media screen and (max-width: 780px) {
+  .c-barraLateral {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    align-items: center;
+  }
+
+  .c-barraLateral nav{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+  }
+
+  .c-title{
+    display: none;
+  }
+
+  .c-logo {
+    max-width: 250px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .c-nav-itens {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+  }
+
+  .perfil{
+    display: none;
+  }
+  
+}

@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vb;
+  background: var(--bs-body-color);
+  color: white;
+}
+
+.c-principal {
+  width: 500px;
+  
+}
+
+.c-btn{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.c-btn-iten{
+    width: 90%;
+}
+
+@media screen and (max-width: 780px){
+  body{
+    padding: 40px;
+  }
+}

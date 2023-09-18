@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vb;
+  background: var(--bs-body-color);
+  color: white;
+}
+
+.c-principal {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+label {
+  margin-top: 6px;
+}
+
+.c-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.c-btn {
+  border: none;
+  border-radius: 2px;
+  background: #6ffc2d;
+  color: white;
+  margin-top: 10px;
+}
+
+.c-links {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}

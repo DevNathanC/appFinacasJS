@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/barraLateral.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Finanças</title>
+  </head>
+  <body>
+    <div class="c-barraLateral">
+      <nav>
+        <img src="src/logo.png" alt="Logo marca do app" class="c-logo" />
+        <h1 class="c-title">GERENCIAR</h1>
+        <div class="c-nav-itens">
+          <div>
+            <img src="src/Vector.svg" class="c-icons" />
+            <button class="c-barraLateral-button button-dashboard">
+              DASHBOARD
+            </button>
+          </div>
+
+          <div>
+            <img src="src/saldo.svg" class="c-icons" />
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#modalSaldo"
+              class="c-barraLateral-button button-saldo"
+            >
+              SALDO
+            </button>
+          </div>
+
+          <div>
+            <img
+              src="src/despesa.svg"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDespesa"
+              class="c-icons"
+            />
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#modalDespesa"
+              class="c-barraLateral-button button-despesa"
+              class="c-barraLateral-button"
+            >
+              DESPESA
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="c-usuario">
+        <div class="perfil">
+          <img id="imgPerfil" src="" />
+          <p id="nomeDeUsuario"></p>
+          <br />
+        </div>
+        <a href="login.html">Log in</a><a href="cadastro.html">cadastro</a>
+      </div>
+    </div>
+
+    <div class="c-dashboard">
+      <h1 class="c-dashboard-title">DASHBOARD</h1>
+      <header class="c-header">
+        <div class="c-header__blocks faturamento">
+          <img src="src/saldo.svg" class="c-header__icons" />
+          <p class="c-blocks__titles">Total Saldo</p>
+          <p class="c-block__numbers" id="totalSaldo"></p>
+        </div>
+
+        <div class="c-header__blocks despe sa">
+          <img src="src/despesa.svg" class="c-header__icons" />
+          <p class="c-blocks__titles">Total Despesas</p>
+          <p class="c-block__numbers" id="totalDespesas"></p>
+        </div>
+
+        <div class="c-header__blocks lucro">
+          <img src="src/lucro.svg" class="c-header__icons" />
+          <p class="c-blocks__titles">Total lucro</p>
+          <p class="c-block__numbers" id="totalLucro"></p>
+        </div>
+      </header>
+
+      <div
+        class="modal fade"
+        id="modalSaldo"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">SALDO</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="c-form__form" id="formSaldo">
+                <label for="descricao" class="form-label">Descrição:</label>
+                <input
+                  type="text"
+                  id="descricao-saldo"
+                  class="form-control c-input__form"
+                  placeholder="Exemplo: Salário mensal, Freelancers"
+                />
+                <label for="valor" class="form-label">Valor:</label>
+                <input
+                  type="tel"
+                  id="valor-saldo"
+                  class="form-control c-input__form"
+                  data-prefix="R$"
+                  placeholder="R$1300,00"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  data-bs-toggle="popover"
+                  title="Saldo Adicionado com sucesso!"
+                >
+                  ADICIONAR SALDO
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="modalDespesa"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">DESPESA</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="c-form__form" id="formDespesa">
+                <label for="descricao" class="form-label">Descrição:</label>
+                <input
+                  type="text"
+                  id="descricao-despesa"
+                  class="form-control c-input__form"
+                  placeholder="Exemplo: Salário mensal, Freelancers"
+                />
+                <label for="valor" class="form-label">Valor:</label>
+                <input
+                  type="tel"
+                  id="valor-despesa"
+                  class="form-control c-input__form"
+                  data-prefix="R$"
+                  placeholder="R$1300,00"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-danger"
+                  data-bs-toggle="popover"
+                  title="Despesa Adicionada com sucesso!"
+                >
+                  ADICIONAR DESPESA
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main class="c-main">
+        <h1 class="c-dashboard-title">VISÃO GERAL</h1>
+        <div class="c-main-listas">
+          <div>
+            <h4>Saldos</h4>
+            <ul id="listaSaldo" class="c-lista-saldo"></ul>
+          </div>
+          <div>
+            <h4>Despesas</h4>
+            <ul id="listaDespesa" class="c-lista-despesa"></ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>

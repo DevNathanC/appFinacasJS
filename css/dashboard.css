@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  display: flex;
+}
+
+.c-dashboard {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+  padding: 16px;
+}
+
+.c-dashboard-title {
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-header__blocks {
+  width: 230px;
+  height: 236px;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  background: #292929;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.c-header__icons {
+  width: 63px;
+  height: 63px;
+  margin-bottom: 50px;
+}
+
+
+.c-blocks__titles {
+  font-weight: 600;
+  color: #6b6b6ba9;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.c-block__numbers {
+  font-weight: 600;
+  color: #fff;
+  font-size: 32px;
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.c-main {
+  flex-grow: 1;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #d9d9d9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-main-listas {
+  justify-content: space-around;
+  display: flex;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+.c-lista-saldo{
+  color: #6b6b6ba9;
+  border-left: #6b6b6ba9 solid 2px;
+  border-right: #6b6b6ba9 solid 2px;
+  padding-right: 20px;
+  
+  align-items: center;
+}
+
+.c-itens-Saldo:hover{
+  color: #6ffc2d;
+}
+
+.c-lista-despesa{
+  margin-left: 6px;
+  color: #6b6b6ba9;
+  border-right: #6b6b6ba9 solid 2px;
+  border-left: #6b6b6ba9 solid 2px;
+  padding-right: 20px;
+}
+
+.c-itens-Despesa:hover{
+  color: #dc3545;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.btn-delete{
+  margin-top: 0px;
+}
+
+@media screen and (max-width:780px) {
+
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-dashboard{
+    padding: 4px;
+  }
+
+  .c-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-header__blocks {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    padding: 16px;
+    background: #292929;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 6px;
+    
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .c-header__icons {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0px;
+  }
+
+  .c-block__numbers{
+    font-size: 14px;
+  }
+
+  .c-blocks__titles{
+    font-size: 14px;
+  }
+
+
+  .c-main{
+    text-align: start;
+  }
+
+  .c-dashboard-title{
+    font-size: 20px;
+  }
+
+  .c-main-listas{
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    justify-content: start;
+  }
+
+  .c-main-listas h4{
+    font-size: 20px;
+  }
+
+  .c-lista-saldo{
+    padding-right: 0px;
+  }
+  
+}
+
